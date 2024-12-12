@@ -1,0 +1,17 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-copilot-ecs-cluster
+  description: Test CoPilot metrics
+  namespace: default
+  annotations:
+    github.com/project-slug: ServerlessOpsIO/test-copilot-ecs-cluster
+    io.serverlessops/cluster-type: ecs
+spec:
+  type: container-cluster
+  lifecycle: production
+  owner: group:default/developers
+  system: system:default/backstage
+  dependsOn:
+    - resource:default/aws-796973489093
